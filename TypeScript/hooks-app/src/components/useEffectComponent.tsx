@@ -4,14 +4,15 @@ const UseEffectComponent = () => {
     const [val, setVal] = useState(1);
 
     useEffect(() => {
-        window.setInterval(() => {
+        const timer = window.setInterval(() => {
             setVal(v => v + 1);
         }, 1000);
+        return () => window.clearInterval(timer);
     }, []);
 
     return (
         <div>
-            {val}
+            {/* {val} */}
         </div>
     )
 }
