@@ -1,58 +1,58 @@
-// import React, { useLayoutEffect, useEffect, useState, useRef } from 'react'
-// import { useForm } from './useForm';
-// import { Hello } from './hello';
-// import { useFetch } from './useFetch';
-// import { useMeasure } from './useMeasure';
+import React, { useLayoutEffect, useEffect, useState, useRef } from 'react'
+import { useForm } from './useForm';
+import { Hello } from './hello';
+import { useFetch } from './useFetch';
+import { useMeasure } from './useMeasure';
 
-// const App = () => {
-//   const [values, handleChange] = useForm({
-//     email: '',
-//     password: '',
-//     firstName: ''
-//   });
-//   const inputRef = useRef();
-//   const hello = useRef(() => console.log('hello'));
+const App = () => {
+  const [values, handleChange] = useForm({
+    email: '',
+    password: '',
+    firstName: ''
+  });
+  const inputRef = useRef();
+  const hello = useRef(() => console.log('hello'));
 
-//   const [showHello, setShowHello] = useState(true);
+  const [showHello, setShowHello] = useState(true);
 
-//   const [rect, inputRef2] = useMeasure([]);
+  const [rect, inputRef2] = useMeasure([]);
 
-//   return (
-//     <div>
-//       <>
-//         <button onClick={() => setShowHello(!showHello)}>toggle</button>
-//         {showHello && <Hello />}
-//         <input
-//           ref={inputRef}
-//           name='email'
-//           value={values.email}
-//           onChange={handleChange}
-//         />
-//         <input
-//           name='firstName'
-//           placeholder='First Name'
-//           value={values.firstName}
-//           onChange={handleChange}
-//         />
-//         <input
-//           ref={inputRef2}
-//           type='password'
-//           name='password'
-//           value={values.password}
-//           onChange={handleChange}
-//         />
-//         <button
-//           onClick={() => {
-//             inputRef.current.focus();
-//             hello.current();
-//           }}
-//         >
-//           focus
-//         </button>
-//       </>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <>
+        <button onClick={() => setShowHello(!showHello)}>toggle</button>
+        {showHello && <Hello />}
+        <input
+          ref={inputRef}
+          name='email'
+          value={values.email}
+          onChange={handleChange}
+        />
+        <input
+          name='firstName'
+          placeholder='First Name'
+          value={values.firstName}
+          onChange={handleChange}
+        />
+        <input
+          ref={inputRef2}
+          type='password'
+          name='password'
+          value={values.password}
+          onChange={handleChange}
+        />
+        <button
+          onClick={() => {
+            inputRef.current.focus();
+            hello.current();
+          }}
+        >
+          focus
+        </button>
+      </>
+    </div>
+  );
+}
 
 // export default App;
 // import {React, useState, useCallback} from 'react'
