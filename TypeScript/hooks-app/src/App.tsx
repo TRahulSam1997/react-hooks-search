@@ -11,6 +11,8 @@ function App() {
       <UseEffectComponent />
       <h1>useContext</h1>
       <UseContextComponent />
+      <h1>useReducer</h1>
+      <UseStateComponent />
     </div>
   );
 }
