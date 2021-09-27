@@ -3,6 +3,8 @@ import UseEffectComponent from './components/useEffectComponent';
 import UseContextComponent from './components/useContextComponent';
 import UseReducerComponent from './components/useReducerComponent';
 import UseRefComponent from './components/useRefComponent';
+import CustomHookComponent from './components/customHookComponent';
+import AdditionalReactComponents from './components/additionalReactComponents';
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
       <UseReducerComponent />
       <h1>useRef</h1>
       <UseRefComponent />
+      <h1>CustomHook</h1>
+      <CustomHookComponent />
+      <h1>AdditionalComponents</h1>
+      <AdditionalReactComponents />
     </div>
   );
 }
